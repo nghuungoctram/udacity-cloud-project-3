@@ -6,7 +6,7 @@ env:
   parameter-store:
     DOCKER_PASSWORD: "docker_password"
 
-phase:
+phases:
   prebuild:
     commands:
       - echo are longinning...
