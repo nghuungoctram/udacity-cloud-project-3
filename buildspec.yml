@@ -7,7 +7,7 @@ env:
     DOCKER_PASSWORD: "docker_password"
 
 phases:
-  prebuild:
+  pre_build:
     commands:
       - echo are longinning...
       - echo $DOCKER_USERNAME $DOCKER_PASSWORD
