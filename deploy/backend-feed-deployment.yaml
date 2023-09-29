@@ -15,7 +15,7 @@ spec:
         service: backend-feed
     spec:
       containers:
-        - image: 49shine/udagram-api-feed:v1
+        - image: 225702921/udagram-api-feed:v1
           name: backend-feed
           imagePullPolicy: Always
           resources:
@@ -48,8 +48,8 @@ spec:
                   key: AWS_REGION
             - name: JWT_SECRET
               valueFrom:
-                configMapKeyRef:
-                  name: env-config
+                secretKeyRef:
+                  name: env-secret
                   key: JWT_SECRET
             - name: POSTGRES_DB
               valueFrom:
@@ -71,10 +71,16 @@ spec:
                 secretKeyRef:
                   name: env-secret
                   key: POSTGRES_USERNAME
-          volumeMounts:
-            - name: aws-secret
-              mountPath: "/root/.aws/"
-              readOnly: true
+            - name: ACCESS_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: env-secret
+                  key: ACCESS_KEY
+            - name: SECRET_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: env-secret
+                  key: SECRET_KEY
       restartPolicy: Always
       volumes:
         - name: aws-secret
