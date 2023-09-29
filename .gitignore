@@ -34,7 +34,7 @@ plugins/
 plugins/android.json
 plugins/ios.json
 $RECYCLE.BIN/
-./env
+
 .DS_Store
 Thumbs.db
 UserInterfaceState.xcuserstate
@@ -42,9 +42,11 @@ UserInterfaceState.xcuserstate
 ./udagram-api-user/node_modules
 ./udagram-frontend/node_modules
 
+
 node_modules
 set_env_example.sh
 set_env.sh
+.env
 
 aws-secret.yaml
 env-secret.yaml
@@ -57,4 +59,5 @@ env-configmap.yaml
 #udagram-api-frontend-deployment.yaml
 #udagram-api-frontend-service.yaml
 #udagram-reverseproxy-deployment.yaml
-#udagram-reverseproxy-service.yaml
+#udagram-reverseproxy-service.yaml.env
+.env

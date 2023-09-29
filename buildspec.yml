@@ -3,8 +3,9 @@ version: 0.2
 env:
   variables:
     DOCKER_USERNAME: "225702921"
-  parameter_store:
+  parameter-store:
     DOCKER_PASSWORD: "docker_password"
+
 phase:
   prebuild:
     commands:
