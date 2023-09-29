@@ -2,7 +2,7 @@ version: 0.2
 
 env:
   variables:
-    DOCKER_USERNAME:"225702921"
+    DOCKER_USERNAME: "225702921"
   parameter_store:
     DOCKER_PASSWORD: "docker_password"
 phase:
